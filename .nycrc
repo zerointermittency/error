@@ -1,0 +1,20 @@
+{
+    "exclude": [
+      "libs/Auth",
+      "coverage/**",
+      "test/**",
+      "test{,-*}.js",
+      "**/*.test.js",
+      "**/__tests__/**",
+      "**/node_modules/**"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "watermarks": {
+      "lines": [90, 100],
+      "functions": [90, 100],
+      "branches": [90, 100],
+      "statements": [90, 100]
+    }
+}
