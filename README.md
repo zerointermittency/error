@@ -11,17 +11,17 @@ yarn add @zerointermittency/error
 
 ## Api
 
-El modulo consta de una sola clase llamada **NError**.
+El modulo consta de una sola clase llamada **ZIError**.
 
-#### NError
+#### ZIError
 
 ##### constructor
 
 Este método es el que se llama cuando se realiza el siguiente código:
 
 ```javascript
-const NError = require('@zerointermittency/error');
-let error = new NError(params);
+const ZIError = require('@zerointermittency/error');
+let error = new ZIError(params);
 ```
 
 **Argumentos**:
@@ -37,30 +37,30 @@ let error = new NError(params);
 
 **Retorna**:
 
-\(*NError*\): Retorna la instancia de la clase **NError**.
+\(*ZIError*\): Retorna la instancia de la clase **ZIError**.
 
 ##### level
 
 Están definidos actualmente solo 3 niveles de error **fatal**, **error** y **warning**.
 
 ```javascript
-const NError = require('@zerointermittency/error');
+const ZIError = require('@zerointermittency/error');
 
-let levelError = NError.level.error,
-    levelFatal = NError.level.fatal,
-    levelWarning = NError.level.warning;
+let levelError = ZIError.level.error,
+    levelFatal = ZIError.level.fatal,
+    levelWarning = ZIError.level.warning;
 ```
 
 #### Recomendación
 
-Para su uso es importante destacar que se puede extender de esta clase NError, por ejemplo:
+Para su uso es importante destacar que se puede extender de esta clase ZIError, por ejemplo:
 
 ```javascript
 'use strict';
 
-const NError = require('@zerointermittency/error');
+const ZIError = require('@zerointermittency/error');
 
-class AuthError extends NError {
+class AuthError extends ZIError {
 
     constructor(opts) {
         opts.prefix = 'auth';
@@ -74,19 +74,19 @@ module.exports = {
         code: 0,
         name: 'internalError',
         message: 'internalError',
-        level: NError.level.fatal,
+        level: ZIError.level.fatal,
     }),
     secretRequired: new AuthError({
         code: 1,
         name: 'secretRequired',
         message: 'secret required',
-        level: NError.level.error,
+        level: ZIError.level.error,
     }),
     appRequired: (extra) => new AuthError({
         code: 2,
         name: 'appRequired',
         message: 'app required to create payload',
-        level: NError.level.error,
+        level: ZIError.level.error,
         extra: extra,
     }),
 };
@@ -96,7 +96,7 @@ En este caso obtenemos una clase de error llamada AuthError, definiendo específ
 
 ## Pruebas funcionales (Unit Testing)
 
-Se llevaron a cabo 2 pruebas funcionales las cuales evalúan todos los casos de éxito al momento de crear la instancia de **NError** y los casos en que va a dar error si los parámetros especificados no tienen los elementos requeridos. Para ejecutar las pruebas:
+Se llevaron a cabo 2 pruebas funcionales las cuales evalúan todos los casos de éxito al momento de crear la instancia de **ZIError** y los casos en que va a dar error si los parámetros especificados no tienen los elementos requeridos. Para ejecutar las pruebas:
 
 ```bash
 yarn test
@@ -120,7 +120,7 @@ add String x 556,429,141 ops/sec ±1.05% (87 runs sampled)
 Fastest is Template Literal,operate String,add String
 ```
 
-- Utilizar de manera global el atributo estático de niveles para la clase **NError**, es mucho mejor en rendimiento que utilizar de manera local el objeto. Para correr la prueba:
+- Utilizar de manera global el atributo estático de niveles para la clase **ZIError**, es mucho mejor en rendimiento que utilizar de manera local el objeto. Para correr la prueba:
 
 ```bash
 yarn benchmark benchmark/LocalvsGlobalStaticAttrClass.js
@@ -138,6 +138,10 @@ Todos los cambios importantes son escritos aquí. El Formato esta basado en [Kee
 
 ### [Unreleased]
 
+### [1.0.4] - 2018-01-04
+#### Changed
+- Se actualizan palabras clave en package.json
+
 ### [1.0.3] - 2018-01-04
 #### Added
 - Se agregan pruebas funcionales con el objetivo de tener probado todo el código, usando [istanbul js][istanbul] para saber cuanto
@@ -153,7 +157,7 @@ Todos los cambios importantes son escritos aquí. El Formato esta basado en [Kee
 ### [1.0.0] - 2018-01-04
 #### Added
 - Se despliega información cuando ocurre un error **unhandledRejection**
-- README.md instalación, pruebas, uso y porque extender de la clase NError
+- README.md instalación, pruebas, uso y porque extender de la clase ZIError
 - Clase **NuncheeErrror** que extiende de la clase nativa **Error** de javascript, la cual permita personalizar el uso de los errores nativos (siendo requerido un nivel de error y un código)
 - Se definen los primeros 3 niveles de error **fatal**, **error**, **warning**
 

@@ -3,31 +3,31 @@
 const chai = {
         expect: require('chai').expect,
     },
-    NError = require('../NError.js');
+    ZIError = require('../ZIError.js');
 
 it('success check attrs', () => {
-    let ne1 = new NError({
+    let ne1 = new ZIError({
             message: 'test1',
             code: 1,
-            level: NError.level.error,
+            level: ZIError.level.error,
         }),
-        ne2 = new NError({
+        ne2 = new ZIError({
             message: 'test2',
             code: 2,
-            level: NError.level.warning,
+            level: ZIError.level.warning,
         }),
-        ne3 = new NError({
+        ne3 = new ZIError({
             prefix: 'test',
             message: 'test3',
             name: 'test',
             code: 3,
-            level: NError.level.warning,
+            level: ZIError.level.warning,
             extra: {a: 'alksdjksadhk'},
         }),
-        ne4 = new NError({
+        ne4 = new ZIError({
             message: 'test4',
             code: 4,
-            level: NError.level.fatal,
+            level: ZIError.level.fatal,
             error: new Error('Fatal 4'),
         });
 
@@ -53,13 +53,13 @@ it('success check attrs', () => {
 });
 
 it('Capture Error', () => {
-    let levelRequired = () => new NError({level: 'asdf'}),
-        coreRequired = () => new NError({
-            level: NError.level.fatal,
+    let levelRequired = () => new ZIError({level: 'asdf'}),
+        coreRequired = () => new ZIError({
+            level: ZIError.level.fatal,
         }),
-        extraObject = () => new NError({
+        extraObject = () => new ZIError({
             code: 1,
-            level: NError.level.fatal,
+            level: ZIError.level.fatal,
             extra: 'error',
         });
     chai.expect(levelRequired).to.throw('invalid level "asdf"');

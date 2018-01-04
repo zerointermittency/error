@@ -1,7 +1,7 @@
 {
   "name": "@zerointermittency/error",
-  "version": "1.0.3",
-  "main": "NError.js",
+  "version": "1.0.4",
+  "main": "ZIError.js",
   "scripts": {
     "test": "nyc mocha --reporter spec --recursive",
     "test-nyan": "mocha --reporter nyan --recursive",
@@ -9,8 +9,7 @@
   },
   "keywords": [
     "error",
-    "npm",
-    "npm-error"
+    "zerointermittency"
   ],
   "engines": ">=8.9.0",
   "license": "MIT",
