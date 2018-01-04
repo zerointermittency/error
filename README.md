@@ -20,7 +20,7 @@ El modulo consta de una sola clase llamada **NError**.
 Este método es el que se llama cuando se realiza el siguiente código:
 
 ```javascript
-const NError = require('npm-error');
+const NError = require('@zerointermittency/error');
 let error = new NError(params);
 ```
 
@@ -44,7 +44,7 @@ let error = new NError(params);
 Están definidos actualmente solo 3 niveles de error **fatal**, **error** y **warning**.
 
 ```javascript
-const NError = require('npm-error');
+const NError = require('@zerointermittency/error');
 
 let levelError = NError.level.error,
     levelFatal = NError.level.fatal,
@@ -58,7 +58,7 @@ Para su uso es importante destacar que se puede extender de esta clase NError, p
 ```javascript
 'use strict';
 
-const NError = require('npm-error');
+const NError = require('@zerointermittency/error');
 
 class AuthError extends NError {
 
@@ -137,6 +137,10 @@ Fastest is global static attrs
 Todos los cambios importantes son escritos aquí. El Formato esta basado en [Keep a Changelog](http://keepachangelog.com/es-ES/1.0.0/)
 
 ### [Unreleased]
+
+### [1.0.2] - 2018-01-04
+#### Changed
+- Se actualizan enlaces en package.json
 
 ### [1.0.1] - 2018-01-04
 #### Changed
