@@ -53,7 +53,7 @@ it('success check attrs', () => {
 });
 
 it('Capture Error', () => {
-    let levelRequired = () => new NError({}),
+    let levelRequired = () => new NError({level: 'asdf'}),
         coreRequired = () => new NError({
             level: NError.level.fatal,
         }),
@@ -62,7 +62,7 @@ it('Capture Error', () => {
             level: NError.level.fatal,
             extra: 'error',
         });
-    chai.expect(levelRequired).to.throw('level is required');
+    chai.expect(levelRequired).to.throw('invalid level "asdf"');
     chai.expect(coreRequired).to.throw('code is required');
     chai.expect(extraObject).to.throw('extra must be "Object"');
 });
