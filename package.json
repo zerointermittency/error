@@ -1,6 +1,6 @@
 {
-  "name": "n-error",
-  "version": "1.0.0",
+  "name": "@zerointermittency/error",
+  "version": "1.0.1",
   "main": "NError.js",
   "scripts": {
     "test": "nyc mocha --reporter spec --recursive",
@@ -14,13 +14,13 @@
   ],
   "engines": ">=8.9.0",
   "license": "MIT",
-  "homepage": "https://github.com/jofierro/n-error",
+  "homepage": "https://github.com/zerointermittency/error",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jofierro/n-error"
+    "url": "https://github.com/zerointermittency/error"
   },
   "bugs": {
-    "url": "https://github.com/jofierro/n-error/issues"
+    "url": "https://github.com/zerointermittency/error/issues"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",

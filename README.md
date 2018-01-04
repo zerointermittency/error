@@ -5,8 +5,8 @@ Base para el manejo de errores para cualquier proyecto.
 ## Instalación
 
 ```bash
-yarn add n-error
-# npm i --save n-error
+yarn add @zerointermittency/error
+# npm i --save @zerointermittency/error
 ```
 
 ## Api
@@ -137,6 +137,10 @@ Fastest is global static attrs
 Todos los cambios importantes son escritos aquí. El Formato esta basado en [Keep a Changelog](http://keepachangelog.com/es-ES/1.0.0/)
 
 ### [Unreleased]
+
+### [1.0.1] - 2018-01-04
+#### Changed
+- Se actualizan enlaces en package.json
 
 ### [1.0.0] - 2018-01-04
 #### Added
