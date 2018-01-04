@@ -7,7 +7,7 @@ const level = {
     },
     levelKeys = Object.keys(level);
 
-class NError extends Error {
+class ZIError extends Error {
 
     constructor({prefix, name, message, level, code, extra, error}) {
         const isError = error && error instanceof Error;
@@ -39,4 +39,4 @@ process.on('unhandledRejection', (reason, p) => {
 });
 /* eslint-enable no-console */
 
-module.exports = NError;
+module.exports = ZIError;

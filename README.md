@@ -138,6 +138,10 @@ Todos los cambios importantes son escritos aquí. El Formato esta basado en [Kee
 
 ### [Unreleased]
 
+### [1.0.5] - 2018-01-04
+#### Fixed
+- Nombre clase principal NError => ZIError
+
 ### [1.0.4] - 2018-01-04
 #### Changed
 - Se actualizan palabras clave en package.json

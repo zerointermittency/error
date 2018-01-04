@@ -1,6 +1,6 @@
 {
   "name": "@zerointermittency/error",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "ZIError.js",
   "scripts": {
     "test": "nyc mocha --reporter spec --recursive",
