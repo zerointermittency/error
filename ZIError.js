@@ -31,12 +31,11 @@ class ZIError extends Error {
 
 }
 
-/* eslint-disable no-console */
 /* istanbul ignore next */
-process.on('unhandledRejection', (reason, p) => {
-    console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
-    // application specific logging, throwing an error, or other logic here
-});
-/* eslint-enable no-console */
+if (process.env.NODE_ENV !== 'production')
+    process.on('unhandledRejection', (reason, p) => {
+        // eslint-disable-next-line
+        console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+    });
 
 module.exports = ZIError;

@@ -110,9 +110,7 @@ Con el objetivo de que sea optimo el código se realizaron 2 pruebas de rendimie
 
 ```bash
 yarn benchmark benchmark/StringConcatenate.js
-```
 
-```
 Template Literal x 562,432,004 ops/sec ±0.85% (85 runs sampled)
 operate String x 561,491,894 ops/sec ±0.77% (85 runs sampled)
 Concatenate String x 48,848,307 ops/sec ±4.89% (82 runs sampled)
@@ -124,9 +122,7 @@ Fastest is Template Literal,operate String,add String
 
 ```bash
 yarn benchmark benchmark/LocalvsGlobalStaticAttrClass.js
-```
 
-```
 local static attrs x 63,716,107 ops/sec ±5.69% (81 runs sampled)
 global static attrs x 557,872,339 ops/sec ±0.85% (84 runs sampled)
 Fastest is global static attrs
@@ -134,40 +130,8 @@ Fastest is global static attrs
 
 ## Changelog
 
-Todos los cambios importantes son escritos aquí. El Formato esta basado en [Keep a Changelog](http://keepachangelog.com/es-ES/1.0.0/)
+Todos los cambios importantes son escritos [aquí](CHANGELOG.md)
 
-### [Unreleased]
-
-### [1.0.5] - 2018-01-04
-#### Fixed
-- Nombre clase principal NError => ZIError
-
-### [1.0.4] - 2018-01-04
-#### Changed
-- Se actualizan palabras clave en package.json
-
-### [1.0.3] - 2018-01-04
-#### Added
-- Se agregan pruebas funcionales con el objetivo de tener probado todo el código, usando [istanbul js][istanbul] para saber cuanto
-
-### [1.0.2] - 2018-01-04
-#### Changed
-- Se actualizan enlaces en package.json
-
-### [1.0.1] - 2018-01-04
-#### Changed
-- Se actualizan enlaces en package.json
-
-### [1.0.0] - 2018-01-04
-#### Added
-- Se despliega información cuando ocurre un error **unhandledRejection**
-- README.md instalación, pruebas, uso y porque extender de la clase ZIError
-- Clase **NuncheeErrror** que extiende de la clase nativa **Error** de javascript, la cual permita personalizar el uso de los errores nativos (siendo requerido un nivel de error y un código)
-- Se definen los primeros 3 niveles de error **fatal**, **error**, **warning**
-
-[dependency-versions]: https://yarnpkg.com/en/docs/dependency-versions#toc-semantic-versioning
 [template-literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 [string-operator]: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Assignment_Operators
 [string-concat]: https://www.w3schools.com/jsref/jsref_concat_string.asp
-[contributing]: https://bitbucket.org/smartbox_way/nunchee-js/src/master/CONTRIBUTING.md
-[istanbul]: https://istanbul.js.org/
